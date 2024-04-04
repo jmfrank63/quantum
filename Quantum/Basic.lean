@@ -66,7 +66,7 @@ def quantum := experiment.run (ModelOrDependencyModel.DependencyModel (QuantumMo
 def quantum_in_classic := experiment.run (ModelOrDependencyModel.DependencyModel (QuantumModel (ClassicModel true) (threshold + 1))) (threshold + 1)
 
 def illegal_classic := experiment.run (ModelOrDependencyModel.Model (ClassicModel false)) (threshold + 1)
-def illegal_quantum_in_quantum := experiment.run (ModelOrDependencyModel.DependencyModel (QuantumModel (ClassicModel false) (threshold - 1))) (threshold -1)
+def illegal_quantum_in_quantum := experiment.run (ModelOrDependencyModel.DependencyModel (QuantumModel (ClassicModel false) (threshold - 1))) (threshold - 1)
 def illegal_quantum_in_classic := experiment.run (ModelOrDependencyModel.DependencyModel (QuantumModel (ClassicModel false) (threshold + 1))) (threshold + 1)
 
 #eval classic
@@ -78,7 +78,7 @@ def illegal_quantum_in_classic := experiment.run (ModelOrDependencyModel.Depende
 #eval illegal_quantum_in_quantum
 #eval illegal_quantum_in_classic
 
-
+-- Theorem : If the classic model is illegal, then the quantum model is illegal
 theorem illegal_classic_implies_illegal_quantum (s : Nat) :
   (ClassicModel false).legal = false → (QuantumModel (ClassicModel false) s).model.legal = false :=
 by intro h; exact h
