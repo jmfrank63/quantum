@@ -1,6 +1,6 @@
-# Quantum Theorem Proofs
+# Quantum Theorem Proof
 
-This repository contains a collection of theorem proofs related to quantum computing, written in Lean, a theorem prover and programming language.
+This repository contains a theorem proof related to quantum computing, written in Lean 4, a theorem prover and programming language.
 
 ## Structure
 
@@ -15,7 +15,7 @@ The repository is structured as follows:
 
 ## Getting Started
 
-To get started with these proofs, you need to have Lean and Lake installed. Once they are installed, you can use Lake to build the project:
+To get started with theis proof, you need to have Lean and Lake installed. Once they are installed, you can use Lake to build the project:
 
 ```sh
 lake build

@@ -83,4 +83,5 @@ theorem illegal_classic_implies_illegal_quantum (s : Nat) :
   (ClassicModel false).legal = false → (QuantumModel (ClassicModel false) s).model.legal = false :=
 by intro h; exact h
 
+#check illegal_classic_implies_illegal_quantum
 #eval "QED"
